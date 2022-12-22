@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!-- ---------- Cover ---------- -->
         <div id="header">
             <div class="container">
                 <nav>
@@ -27,6 +28,7 @@
             </div>
         </div>
         
+        <!-- ---------- About ---------- -->
         <div id="about">
             <div class="container">
                 <div class="row">
@@ -35,22 +37,110 @@
                     </div>
                     <div class="about-col-2">
                         <h1 class="sub-title">About Me</h1>
-                        <p>This is a short description about me blablablablabla blablablablablablablablablablablablablabla blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla blablablablablablablablablabla</p>
+                        <p>This is a short description about me</p>
                         <div class="tab-titles">
-                            <p class="tab-links active-link">Skills</p>
-                            <p class="tab-links">Experience</p>
-                            <p class="tab-links">Education</p>
+                            <p class="tab-links active-link" onclick="opentab('skills')">Hard Skills</p>
+                            <p class="tab-links"  onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links"  onclick="opentab('education')">Education</p>
                         </div>
-                        <div class="tab-contents">
+                        <div class="tab-contents active-tab" id="skills">
                             <ul>
-                                <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
-                                <li><span>Web Development</span><br>Web app development</li>
-                                <li><span>App Development</span><br>Building Android/iOS apps</li>
+                                <li><span>TODO</span><br>TODO</li>
+                                <li><span>TODO</span><br>TODO</li>
+                                <li><span>TODO</span><br>TODO</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2022 - Current</span><br>Junior Programmer at <span style="color: #4ECCA3; font-size: 16px">Petoons Studio</span></li>
+                                <li><span>2021 - Current</span><br>Co-Founder of <span style="color: #4ECCA3; font-size: 16px">Ludum Journal</span>, a game design magazine</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2019 - 2023</span><br>Interactive Digital Contents, a university degree at <span style="color: #4ECCA3; font-size: 16px">ENTI-UB</span></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- ---------- Projects ---------- -->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Games</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <div class="work-col-1">
+                            <a href="#"><img src="images/roguedice.png" alt=""></a>
+                        <div class="layer">
+                            <img src="Images/khaliu_white.png">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="work-description">
+                        <h3>Roguedice by Khaliu</h3>
+                        <p><span>Roguelike deckbuilding</span> game with <span>costumizable dice</span>. Explore the forest, fight enemies and find juicy rewards!</p>
+                        <p> Duration: <span>6 months</span> 
+                            <br>Roles: <span>Game Programmer </span>&<span> Scrum Master</span> </p>
+                        
+                        <a>🏆 <span>Tomacco award</span> - Indie Burger Developer Awards 2022 
+                            <br>🏆 <span>4 Nominations</span> - Indie Burger Developer Awards 2022
+                            <br>🏆 <span>Nomination</span> - ENTI-UB 2022 Demoday</a>
+                    </div>
+                    <div class="work">
+                        <div class="work-col-1">
+                            <a href="#"><img src="images/spellcloak.png" alt=""></a>
+                        <div class="layer">
+                            <img src="Images/khaliu_white.png">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="work-description">
+                        <h3>Spellcloak by Khaliu</h3>
+                        <p><span>Magic</span> based <span>metroidvania</span> game with agile and fast platforming.</p>
+                        <a>🏆 Tomacco award - Indie Burger Developer Awards 2022 
+                            <br>🏆 4 Nominations - Indie Burger Developer Awards 2022
+                            <br>🏆 Nomination - ENTI-UB 2022 Demoday</a>
+                    </div>
+                    <div class="work">
+                        <div class="work-col-1">
+                            <a href="#"><img src="images/roguedice.png" alt=""></a>
+                        <div class="layer">
+                            <img src="Images/khaliu_white.png">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="work-description">
+                        <h3>Roguedice</h3>
+                        <p>Roguedice by Khaliu descriprion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                // Hide last selection
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+
+                // Show current selection
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
     </body>
 </html>
