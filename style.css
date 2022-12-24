@@ -160,8 +160,7 @@ nav ul li a:hover::after{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    display: inline-flex;
-    margin: 50px 0;
+    margin: auto;
 }
 /* Right description */
 .work-description{
@@ -189,7 +188,6 @@ nav ul li a:hover::after{
 .work-description a{
     line-height: 30px;
 }
-
 /* Icon content */ 
 .work img{
     width: 100%;
