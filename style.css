@@ -173,6 +173,11 @@ nav ul li a:hover::after{
     margin-bottom: 25px;
     color: #4ecca3;
 }
+.work-description h3 span{
+    font-size: 15px;
+    font-weight: bold;
+    color: #EEEEEE;
+}
 .work-description p{
     line-height: 25px;
     margin-bottom: 30px;
