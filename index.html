@@ -16,8 +16,7 @@
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Servicies</a></li>
-                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Projects</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
@@ -38,30 +37,23 @@
                     <div class="about-col-2">
                         <h1 class="sub-title">About Me</h1>
                         <p>This is a short description about me</p>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Hard Skills</p>
-                            <p class="tab-links"  onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links"  onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
+                        <h3>Experience</h3>
+                        <h3>Education</h3>
+                        <h3>Social Media</h3>
+
+                            <!-- <ul>
                                 <li><span>TODO</span><br>C++ / C#</li>
                                 <li><span>TODO</span><br>Unity</li>
                                 <li><span>TODO</span><br>Unreal</li>
                                 <li><span>TODO</span><br>Jira Software</li>
                             </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
                             <ul>
                                 <li><span>2022 - Current</span><br>Junior Programmer at <span style="color: #4ECCA3; font-size: 16px">Petoons Studio</span></li>
                                 <li><span>2021 - Current</span><br>Co-Founder of <span style="color: #4ECCA3; font-size: 16px">Ludum Journal</span>, a game design magazine</li>
                             </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
                             <ul>
                                 <li><span>2019 - 2023</span><br>Interactive Digital Contents, a university degree at <span style="color: #4ECCA3; font-size: 16px">ENTI-UB</span></li>
-                            </ul>
-                        </div>
+                            </ul> -->
                     </div>
                 </div>
             </div>
@@ -71,103 +63,169 @@
         
         <div id="portfolio">
             <div class="container">
-                <h1 class="sub-title">My Games</h1>
-                <div class="work-list">
-                    <div class="cell work">
-                        <div class="work-logo">
-                            <a href="#"><img src="images/roguedice.png" alt=""></a>
+                <h1 class="sub-title">Projects</h1>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('games')">College Games</p>
+                    <p class="tab-links"  onclick="opentab('gamejams')">GameJams</p>
+                    <p class="tab-links"  onclick="opentab('professional')">Professional Experience</p>
+                </div>
+                <!-- ------ MY GAMES ------ -->
+                <div class="tab-contents active-tab" id="games">
+                    <div class="work-list">
+                        <!-- -- Roguedice -- -->
+                        <div class="cell">
+                            <div class="work work-logo">
+                                <img src="images/roguedice.png" alt="">
+                                <a href="https://khaliu.itch.io/roguedice">
+                                    <div class="layer">
+                                        <img src="images/khaliu_white.png">
+                                    </div>
+                                </a>
+                            </div>  
                         </div>
-                        <div class="layer">
-                            <img src="Images/khaliu_white.png">
-                        </div>     
-                    </div>
-                    <div class="cell work-description">
-                        <h3>Roguedice <span>by Khaliu</span></h3>
-                        <p><span>Roguelike deckbuilding</span> game with <span>costumizable dice</span>. Explore the forest, fight enemies and find juicy rewards!</p>
-                        <p> Duration: <span>6 months</span> 
-                            <br>My Roles: <span>Game Programmer </span>,<span> Scrum Master </span>&<span> Technical Artist support</span></p>
-                        <p class="awards">🏆 <span>Tomacco award</span> - Indie Burger Developer Awards 2022 
-                            <br>🏆 <span>4 Nominations</span> - Indie Burger Developer Awards 2022
-                            <br>🏆 <span>Nomination</span> - ENTI-UB 2022 Demoday</p>
-                    </div>
-                    <div class="cell work">
-                        <div class="work-logo">
-                            <a href="#"><img src="images/spellcloak.png" alt=""></a>
+                        <div class="cell work-description">
+                            <h3>Roguedice <span>by Khaliu</span></h3>
+                            <p><span>Roguelike deckbuilding</span> game with <span>costumizable dice</span>. Explore the forest, fight enemies and find juicy rewards!</p>
+                            <p> Duration: <span>6 months</span> 
+                                <br>My Roles: <span>Game Programmer </span>,<span> Scrum Master </span>&<span> Technical Artist support</span></p>
+                            <p class="awards">🏆 <span>Tomacco award</span> - Indie Burger Developer Awards 2022 
+                                <br>🏆 <span>4 Nominations</span> - Indie Burger Developer Awards 2022
+                                <br>🏆 <span>Nomination</span> - ENTI-UB 2022 Demoday</p>
                         </div>
-                        <div class="layer">
-                            <img src="Images/khaliu_white.png">
+                        <!-- -- Spellcloak -- -->
+                        <div class="cell">
+                            <div class="work work-logo">
+                                <a href="#"><img src="images/spellcloak.png" alt=""></a>                        
+                                <div class="layer">
+                                    <img src="images/khaliu_white.png">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="cell work-description">
-                        <h3>Spellcloak<span> by Khaliu</span></h3>
-                        <p><span>Magic</span> based <span>metroidvania</span> game with agile and fast platforming.</p>
-                        <p> Duration: <span>6 months</span> 
-                            <br>My Roles: <span>Game Programmer </span>&<span> Artist</span></p>
-                        <p class="awards">🏆 <span>Special Mention</span> - ENTI-UB 2021 Demoday</p>
-                    </div>
-                    <div class="cell work">
-                        <div class="work-logo">
-                            <a href="#"><img src="images/sanmis.png" alt=""></a>
-                        </div>
-                        <div class="layer">
-                            <img src="Images/beerjam.png">
-                        </div>
-                    </div>
-                    <div class="cell work-description">
-                        <h3>Los Sanmis<span> - San Miguel GameJam submission</span></h3>
-                        <p>A short game of collecting little companions called Sanmis and bring them alive to your friends.</p>
-                        <p> Duration: <span>2 days</span> 
-                            <br>My Roles: <span>Game Programmer</span></p>
-                        <p class="awards">🏆 <span>2nd place</span> - San Miguel Beerjam 2022</p>
-                    </div>
-                    <div class="cell work">
-                        <div class="work-logo">
-                            <a href="#"><img src="images/retriever.png" alt=""></a>
-                        </div>
-                        <div class="layer">
-                            <img src="Images/intrinsicGamejam.png">
+                        <div class="cell work-description">
+                            <h3>Spellcloak<span> by Khaliu</span></h3>
+                            <p><span>Magic</span> based <span>metroidvania</span> game with agile and fast platforming.</p>
+                            <p> Duration: <span>6 months</span> 
+                                <br>My Roles: <span>Game Programmer </span>&<span> Artist</span></p>
+                            <p class="awards">🏆 <span>Special Mention</span> - ENTI-UB 2021 Demoday</p>
                         </div>
                     </div>
-                    <div class="cell work-description">
-                        <h3>The Retriever<span> - Intrinsic GameJam submission</span></h3>
-                        <p><span>Vertical platformer</span> game with <span>procedurally</span> generated levels.</p>
-                        <p> Duration: <span>3 days</span> 
-                            <br>My Roles: <span>Game Programmer </span>&<span> Artist</span></p>
-                        <p class="awards">🏆 <span>2nd place</span> - Intrinsic GameJam 2020</p>
-                    </div>
-                    <div class="cell work">
-                        <div class="work-logo">
-                            <a href="#"><img src="images/mourningHike.png" alt=""></a>
+                </div>
+                <!-- ------ GAME JAMS ------ -->
+                <div class="tab-contents" id="gamejams">
+                    <div class="work-list">
+                        <!-- -- Los Sanmis -- -->
+                        <div class="cell">
+                            <div class="work work-logo">
+                                <a href="#"><img src="images/sanmis.png" alt=""></a>
+                                <div class="layer">
+                                    <img src="images/beerjam.png">
+                                </div>
+                            </div>
                         </div>
-                        <div class="layer">
-                            <img src="Images/spaingamejam.png">
+                        <div class="cell work-description">
+                            <h3>Los Sanmis<span> - San Miguel GameJam submission</span></h3>
+                            <p>A short game of collecting little companions called Sanmis and bring them alive to your friends.</p>
+                            <p> Duration: <span>2 days</span> 
+                                <br>My Roles: <span>Game Programmer</span></p>
+                            <p class="awards">🏆 <span>2nd place</span> - San Miguel Beerjam 2022</p>
+                        </div>
+                        <!-- -- The Retreiver -- -->
+                        <div class="cell">
+                            <div class="work work-logo">
+                                <a href="#"><img src="images/retriever.png" alt=""></a>
+                                <div class="layer">
+                                    <img src="images/intrinsicGamejam.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell work-description">
+                            <h3>The Retriever<span> - Intrinsic GameJam submission</span></h3>
+                            <p><span>Vertical platformer</span> game with <span>procedurally</span> generated levels.</p>
+                            <p> Duration: <span>3 days</span> 
+                                <br>My Roles: <span>Game Programmer </span>&<span> Artist</span></p>
+                            <p class="awards">🏆 <span>2nd place</span> - Intrinsic GameJam 2020</p>
+                        </div>
+                        <!-- -- Mourning Hike -- -->
+                        <div class="cell">
+                            <div class="work work-logo">
+                                <a href="#"><img src="images/mourningHike.png" alt=""></a>                        <div class="layer">
+                                    <img src="images/spaingamejam.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell work-description">
+                            <h3>Mourning Hike<span> - Spain Game Devs Jam II submission</span></h3>
+                            <p>A <span>platformer</span> game to go through the <span>stages of mourning</span> and <span>grief</span> after the loss of a loved one.</p>
+                            <p> Duration: <span>1 week</span> 
+                                <br>My Roles: <span>Game Programmer </span>&<span> Technical Artist</span></p>
+                        </div>
+                        <!-- -- Swordspring -- -->
+                        <div class="cell">
+                            <div class="work work-logo">
+                                <a href="#"><img src="images/swordspring.png" alt=""></a>
+                                <div class="layer">
+                                    <img src="images/spaingamejam.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell work-description">
+                            <h3>Swordspring<span> - Spain Game Devs Jam III submission</span></h3>
+                            <p><span>Action</span> game where you must <span>push enemies</span> into hazards.</p>
+                            <p> Duration: <span>1 week</span> 
+                                <br>My Roles: <span>Game Programmer</span></p>                        
                         </div>
                     </div>
-                    <div class="cell work-description">
-                        <h3>Mourning Hike<span> - Spain Game Devs Jam II submission</span></h3>
-                        <p>A <span>platformer</span> game to go through the <span>stages of mourning</span> and <span>grief</span> after the loss of a loved one.</p>
-                        <p> Duration: <span>1 week</span> 
-                            <br>My Roles: <span>Game Programmer </span>&<span> Technical Artist</span></p>
-                    </div>
-                    <div class="cell work">
-                        <div class="work-logo">
-                            <a href="#"><img src="images/swordspring.png" alt=""></a>
+                </div>
+                <!-- ------ PROFESSIONAL WORK ------ -->
+                <div class="tab-contents" id="professional">
+                    <div class="work-list">
+                        <!-- -- Curse of the Sea Rats -- -->
+                        <div class="cell">
+                            <div class="work work-logo">
+                                <a href="#"><img src="images/COTSR.jpg" alt=""></a>
+                                <div class="layer">
+                                    <img src="images/petoons.jpg">
+                                </div>
+                            </div>
                         </div>
-                        <div class="layer">
-                            <img src="Images/spaingamejam.png">
+                        <div class="cell work-description">
+                            <h3>Curse of the Sea Rats<span> by Petoons Studio</span></h3>
+                            <p><span>Ratoidvania platform adventure</span> with lovingly crafted, <span>hand-drawn</span> animations.</p>
+                            <p>My Roles: <span>Junior Programmer</span></p>
+                            <p class="awards">🏆 <span>Best Adventure Game</span> - Indie Dev Day 2022</p>
                         </div>
-                    </div>
-                    <div class="cell work-description">
-                        <h3>Swordspring<span> - Spain Game Devs Jam III submission</span></h3>
-                        <p><span>Action</span> game where you must <span>push enemies</span> into hazards.</p>
-                        <p> Duration: <span>1 week</span> 
-                            <br>My Roles: <span>Game Programmer</span></p>                        
+                        <!-- -- Peppa Pig -- -->
+                        <div class="cell">
+                            <div class="work work-logo">
+                                <a href="#"><img src="images/peppapig.jpg" alt=""></a>
+                                <div class="layer">
+                                    <img src="images/petoons.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell work-description">
+                            <h3>Peppa Pig World Adventures<span> by Petoons Studio</span></h3>
+                            <p><span>Story telling</span> game to play in the bigger, wider world of <span>Peppa Pig</span> , and bring your family into the story! </p>
+                            <p>My Roles: <span>Junior Programmer</span></p>
+                        </div>
+                        <!-- -- Bratz -- -->
+                        <div class="cell">
+                            <div class="work work-logo">
+                                <a href="#"><img src="images/bratz.jpg" alt=""></a>
+                                <div class="layer">
+                                    <img src="images/petoons.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell work-description">
+                            <h3>Bratz flaunt your fashion<span> by Petoons Studio</span></h3>
+                            <p><span>Adventure</span> game to play as your <span>favorite Bratz</span> character to become the world's <span>best fashion reporter</span>.</p>
+                            <p>My Roles: <span>QA</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
 
 
         <script>

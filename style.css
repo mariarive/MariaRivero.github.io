@@ -59,7 +59,7 @@ nav ul li a:hover::after{
 }
 /* Sub header of the logo */
 .header-text{
-    width: 50%;
+    width: 65%;
     margin-top: 20%;
     font-size: 30px;
 }
@@ -75,8 +75,8 @@ nav ul li a:hover::after{
 
 /* Text of the about section */
 #about{
-    padding: 80px 0;
     color: #ababab;
+    padding-top: 15%;
 }
 .row{
     display: flex;
@@ -90,7 +90,8 @@ nav ul li a:hover::after{
 }
 .profile{
     width: 100%;
-    border: 15px;
+    border: 20%;
+    border-radius: 5%;
 }
 
 /* RIGHT */
@@ -104,7 +105,6 @@ nav ul li a:hover::after{
 }
 .tab-titles{
     display: flex;
-    margin: 20px 0 40px;
 }
 .tab-links{
     margin: 50px;
@@ -112,6 +112,7 @@ nav ul li a:hover::after{
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    color: #ababab;
 }
 /* Hover of headers */
 .tab-links::after{
@@ -133,7 +134,6 @@ nav ul li a:hover::after{
 }
 .tab-contents ul li span{
     color: #EEEEEE;
-    font-size: 14px;
 }
 /* Activate text to be active */
 .tab-contents{
@@ -143,8 +143,8 @@ nav ul li a:hover::after{
     display: block;
 }
 .tab-links.active-link{
-    font-size: 20px;
     color: #EEEEEE;
+    transform: scale(1.1);
 }
 
 
@@ -152,12 +152,12 @@ nav ul li a:hover::after{
 
 /* ------------ PORTFOLIO ------------ */
 #portfolio{
-    padding: 30px 0;
+    padding: 20% 0;
 }
 .work-list{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin: 50px 0;
+    place-items: center start;
 } 
 .work{
     border-radius: 10px;
@@ -166,7 +166,7 @@ nav ul li a:hover::after{
     margin: auto;
 }
 .cell{
-    padding-top: 50px;
+    padding: 15% 0;
 } 
 /* Right description */
 .work-description{
