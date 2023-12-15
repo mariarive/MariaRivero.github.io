@@ -10,30 +10,31 @@
     <body>
         <!-- ---------- Cover ---------- -->
         <div id="header">
-            <div class="container">
-                <nav>
-                    <img src="images/logo.png" class="logo">
-                    <ul>
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#portfolio">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <img src="images/banner.svg" class="banner">
+            <div class="home-code">
+                <p>&lt;:</p>
             </div>
-            <div class="header-text">
-                <p>Game Developer</p>
-                <h1>Hi, I'm <span> Maria Rivero </span> <br>welcome to my portfolio!</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>                    
+            </nav>              
+            <hr class="line">  
+        </div>
+        <div id="home">
+           
+            <div class="home-text">
+                <h1>Hi, <br>I'm <span> Maria Rivero </span> <br>welcome to my portfolio!</h1>
+                <p><br>Game Programmer</p>
             </div>
         </div>
         
         <hr class="line">
         <!-- ---------- About ---------- -->
         <div id="about">
-            <div class="container">
-                <!-- <hr class="solid"> -->
-                
+            <div class="container">           
                 <div class="row">
                     <div class="about-col-1">
                         <img src="images/perfil.JPG"class="profile">
@@ -259,6 +260,8 @@
         </div>
 
         <script>
+            var header = document.getElementById("header");
+            var animation = false;
 
             var tablinks = document.getElementsByClassName("tab-links");
             var tabcontents = document.getElementsByClassName("tab-contents");
@@ -284,6 +287,47 @@
                 alert("Copied to clipboard: mariarive001@gmail.com" );
             }
 
+            // When the user scrolls the page, execute myFunction
+            window.onscroll = function() {myFunction()};
+
+            function myFunction() {
+                // if(window.pageYOffset>80)
+                // {
+                //     if(!animation){
+                //         scroll(50);
+                //         animation = true;
+                //     }
+                // }
+                    
+            }
+            function scroll(positionY){
+                const startY = window.scrollY;
+                const distance = positionY - startY;
+                const duration = 1; // Duración en milisegundos
+
+                let startTimestamp = null;
+
+                function step(timestamp) {
+                    if (!startTimestamp) startTimestamp = timestamp;
+
+                    const progress = timestamp - startTimestamp;
+                    window.scrollTo(0, easeInOutCubic(progress, startY, distance, duration));
+
+                    if (progress < duration) {
+                        window.requestAnimationFrame(step);
+                    }
+                }
+
+                window.requestAnimationFrame(step);
+                }
+            
+            // Función de easing (suavizado) para la animación
+            function easeInOutCubic(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t * t + b;
+                t -= 2;
+                return c / 2 * (t * t * t + 2) + b;
+            }
         </script>
     </body>
 </html>

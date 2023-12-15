@@ -9,36 +9,37 @@ html{
 }
 body{
     background: #232931;
-    color: #eeeeee;
+    color: #eeeeee;    
 }
 hr.line{
     border-color: #4ecca3;
 }
-/* Banner Image */
+/* HEADER */
 #header{
+    background: #191e23;
+    top: 0;
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
     width: 100%;
-    height: 100vh;
-    background-color: #191e23;
+    position: fixed;
 }
-.container{
-    padding: 10px 10%;
+.sticky{
+
 }
-/* Logo + Index */
 nav{
+    padding: 10px 10%;
     display: flex;
-    align-items: right;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
 }
-/* Logo image */
-.logo{
-    width: 15%;
-}
-/* Index links */
-nav ul li{
-    display: inline-block;
+nav ul {
     list-style: none;
-    margin: 10px 20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li{
+    margin-left: 20px;
+    margin-top: 20px;
 }
 /* Each title of the index */
 nav ul li a{
@@ -61,20 +62,37 @@ nav ul li a::after{
 nav ul li a:hover::after{ 
     width: 100%;
 }
-/* Sub header of the logo */
-.header-text{
+/* HOME */
+#home{
+    width: 100%;
+    height: 100vh;
+    background-color: #191e23;
+}
+/* Sub home of the logo */
+.home-code{
     width: 100%;
     margin: auto;
-    font-size: 25px;
-    text-align: center;
-    bottom: 5%;
+    font-size: 20px;
+    text-align: left;
     position: absolute;
+    padding: 25px 10%;
+    color: #a1a1a1;
+    font-style: italic;
 }
-.header-text h1{
-    margin-top: 20px;
-    font-size: 45px;
+.home-text{
+    width: 100%;
+    margin: auto;
+    font-size: 35px;
+    text-align: left;
+    top: 30%;
+    bottom: 30%;
+    position: absolute;
+    left: 10%;
 }
-.header-text h1 span{
+.home-text h1{
+    font-size: 60px;
+}
+.home-text h1 span{
     color: #4ecca3;
 }
 img.banner{
@@ -82,13 +100,30 @@ img.banner{
     margin: auto;
     width: 25%;
 }
-
+@keyframes codeAnimation {
+    0% {
+        content: 'Maria Rivero';
+    }
+    50% {
+        content: 'Maria Rivero_';
+    }
+    100% {
+        content: 'Maria Rivero';
+    }
+}
+.home-code p:after {
+    content: '';
+    display: inline-block;
+    animation: codeAnimation 2s infinite;
+    margin-left: 5px;
+}
 /* ------------ ABOUT ------------ */
 
 /* Text of the about section */
 #about{
     color: #ababab;
-    padding-bottom:5%;
+    padding-top:5%;
+    padding-left:5%;
 }
 .row{
     display: flex;
@@ -211,7 +246,8 @@ img.banner{
 
 /* ------------ PORTFOLIO ------------ */
 #portfolio{
-    padding-bottom:5%;
+    padding-top:5%;
+    padding-left:5%;
     background-color: #191e23;
 }
 .work-list{
