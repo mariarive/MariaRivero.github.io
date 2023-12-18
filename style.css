@@ -13,6 +13,13 @@ body{
 }
 hr.line{
     border-color: #4ecca3;
+    width: 100%;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* Add other styles as needed */
 }
 /* HEADER */
 #header{
@@ -22,11 +29,34 @@ hr.line{
     width: 100%;
     position: fixed;
 }
-.sticky{
-
+.logo{
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+    position: absolute;
+    padding: 25px 5%;
+    color: #a1a1a1;
+    font-style: italic;
 }
+@keyframes codeAnimation {
+    0% {
+        content: 'Maria Rivero';
+    }
+    50% {
+        content: 'Maria Rivero_';
+    }
+    100% {
+        content: 'Maria Rivero';
+    }
+}
+.logo p:after {
+    content: '';
+    display: inline-block;
+    animation: codeAnimation 2s infinite;
+}
+
 nav{
-    padding: 10px 10%;
+    padding: 10px 5%;
     display: flex;
     justify-content: flex-end; /* Align items to the right */
     align-items: center;
@@ -64,30 +94,19 @@ nav ul li a:hover::after{
 }
 /* HOME */
 #home{
+    background: #191e23;
     width: 100%;
     height: 100vh;
-    background-color: #191e23;
 }
 /* Sub home of the logo */
-.home-code{
-    width: 100%;
-    margin: auto;
-    font-size: 20px;
-    text-align: left;
-    position: absolute;
-    padding: 25px 10%;
-    color: #a1a1a1;
-    font-style: italic;
-}
 .home-text{
     width: 100%;
-    margin: auto;
     font-size: 35px;
     text-align: left;
     top: 30%;
     bottom: 30%;
     position: absolute;
-    left: 10%;
+    padding-left: 10%;
 }
 .home-text h1{
     font-size: 60px;
@@ -95,32 +114,13 @@ nav ul li a:hover::after{
 .home-text h1 span{
     color: #4ecca3;
 }
-img.banner{
-    display: block;
-    margin: auto;
-    width: 25%;
-}
-@keyframes codeAnimation {
-    0% {
-        content: 'Maria Rivero';
-    }
-    50% {
-        content: 'Maria Rivero_';
-    }
-    100% {
-        content: 'Maria Rivero';
-    }
-}
-.home-code p:after {
-    content: '';
-    display: inline-block;
-    animation: codeAnimation 2s infinite;
-    margin-left: 5px;
-}
+
 /* ------------ ABOUT ------------ */
 
 /* Text of the about section */
 #about{
+    width: 100%;
+    height: 100vh;
     color: #ababab;
     padding-top:5%;
     padding-left:5%;
@@ -248,6 +248,7 @@ img.banner{
 #portfolio{
     padding-top:5%;
     padding-left:5%;
+    padding-bottom:5%;
     background-color: #191e23;
 }
 .work-list{
@@ -348,30 +349,44 @@ img.banner{
 }
 /* ------ CONTACT ------ */
 #contact{
-    padding-bottom:5%;
-}
-.social-icons img{
-    width: 15%;
-    margin: 10% 2% 0 2%;
+    bottom: 0;
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    background: #191e23;
 }
 .content{
-    padding-top: 5%;
-    display: block;
-    margin: auto;
-    width: 50%;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+.icons{
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+.icons img{
+    width: 30px;
+}
+.contact-info {
+    order: 0; /* Cambia el orden en la visualización */
 }
 
-.content button{
+button{
     background-color: transparent;
     border: none;
-    color: #EEEEEE;
+    color: #a1a1a1;
     font-weight: bold;
     font-size: large;
-    margin-top: 5%;
+    margin-top: 0%;
+    margin-left: 0%;
     cursor: pointer;
 }
-
+button:hover {
+    color: #4ecca3;
+}
 /* ----- css 4 small screens ----- */
 
 @media only screen and (max-width: 700px){

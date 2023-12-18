@@ -10,8 +10,8 @@
     <body>
         <!-- ---------- Cover ---------- -->
         <div id="header">
-            <div class="home-code">
-                <p>&lt;:</p>
+            <div class="logo">
+                <p>&lt;: </p>
             </div>
             <nav>
                 <ul>
@@ -23,8 +23,7 @@
             </nav>              
             <hr class="line">  
         </div>
-        <div id="home">
-           
+        <div id="home">           
             <div class="home-text">
                 <h1>Hi, <br>I'm <span> Maria Rivero </span> <br>welcome to my portfolio!</h1>
                 <p><br>Game Programmer</p>
@@ -240,29 +239,24 @@
             </div>
         </div>
 
-        <hr class="line">
         <!-- ---------- Contact ---------- -->
         <div id="contact">
-            <div class="container">
-                <div class="content">
-                    <h2>Contact Me</h2>
+            <hr class="line">
+            <div class="content">
+                <!-- <h2>Contact Me</h2> -->
+                <div class="contact-info">
                     <button title="Copy email" onclick="copyText()">mariarive001@gmail.com</button>
-                    
-                    <div class="social-icons">
+                </div>
+                <div class="icons">                    
                         <a href="https://twitter.com/LaRiveDev" target="_blank"><img src="images/twitter.png" alt="twitter"></a>
                         <a href="https://larive.itch.io/" target="_blank"><img src="images/itch-io.png" alt="itchio"></a>
                         <a href="https://www.linkedin.com/in/maria-rimo/" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
                         <a href="files/Maria_Rivero_Molina_CV.pdf" download="Maria_Rivero_Molina-cv"><img src="images/cv.png" alt="cv"></a>
-                    </div>
                 </div>
             </div>
-
         </div>
 
         <script>
-            var header = document.getElementById("header");
-            var animation = false;
-
             var tablinks = document.getElementsByClassName("tab-links");
             var tabcontents = document.getElementsByClassName("tab-contents");
             function opentab(tabname){
@@ -287,47 +281,12 @@
                 alert("Copied to clipboard: mariarive001@gmail.com" );
             }
 
-            // When the user scrolls the page, execute myFunction
-            window.onscroll = function() {myFunction()};
+            // Get references to the sections you want to make sticky
+            const home = document.getElementById('home');
+            const aboutSection = document.getElementById('about');
+            const portfolioSection = document.getElementById('portfolio');
+            const contactSection = document.getElementById('contact');
 
-            function myFunction() {
-                // if(window.pageYOffset>80)
-                // {
-                //     if(!animation){
-                //         scroll(50);
-                //         animation = true;
-                //     }
-                // }
-                    
-            }
-            function scroll(positionY){
-                const startY = window.scrollY;
-                const distance = positionY - startY;
-                const duration = 1; // Duración en milisegundos
-
-                let startTimestamp = null;
-
-                function step(timestamp) {
-                    if (!startTimestamp) startTimestamp = timestamp;
-
-                    const progress = timestamp - startTimestamp;
-                    window.scrollTo(0, easeInOutCubic(progress, startY, distance, duration));
-
-                    if (progress < duration) {
-                        window.requestAnimationFrame(step);
-                    }
-                }
-
-                window.requestAnimationFrame(step);
-                }
-            
-            // Función de easing (suavizado) para la animación
-            function easeInOutCubic(t, b, c, d) {
-                t /= d / 2;
-                if (t < 1) return c / 2 * t * t * t + b;
-                t -= 2;
-                return c / 2 * (t * t * t + 2) + b;
-            }
         </script>
     </body>
 </html>
